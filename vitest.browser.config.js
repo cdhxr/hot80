@@ -12,9 +12,15 @@ export default defineConfig({
     }
   },
   test: {
-    environment: "node",
-    include: ["test/**/*.test.{js,jsx}"],
-    exclude: ["test/browser/**"],
+    name: "browser",
+    include: ["test/browser/**/*.browser.test.{js,jsx}"],
+    browser: {
+      enabled: true,
+      provider: "playwright",
+      headless: true,
+      instances: [{ browser: "chromium" }]
+    },
+    setupFiles: ["./test/browser/setup.js"],
     restoreMocks: true,
     clearMocks: true
   }

@@ -5,7 +5,10 @@
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:todos": "set HOT80_TARGET=Todos&& vitest run"
+    "test:todos": "set HOT80_TARGET=Todos&& vitest run",
+    "test:browser": "vitest run --config vitest.browser.config.js",
+    "test:browser:watch": "vitest --config vitest.browser.config.js",
+    "test:todos:browser": "set HOT80_TARGET=Todos&& vitest run --config vitest.browser.config.js"
   },
   "dependencies": {
     "react": "^19.1.1",
@@ -13,7 +16,9 @@
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
+    "@vitest/browser": "^3.2.4",
     "jsdom": "^26.1.0",
+    "playwright": "^1.58.2",
     "vitest": "^3.2.4"
   }
 }

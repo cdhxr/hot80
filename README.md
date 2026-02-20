@@ -74,6 +74,8 @@ https://www.nowcoder.com/discuss/844536328413773824
 - `vitest`
 - `@testing-library/react`
 - `jsdom`
+- `@vitest/browser`
+- `playwright`
 
 详见 `package.json`。
 
@@ -84,10 +86,12 @@ pnpm install
 pnpm test
 pnpm test:watch
 pnpm test:todos
+pnpm test:browser
 ```
 
 - `pnpm test`: 运行 `answer/` 参考实现（默认）
 - `pnpm test:todos`: 运行 `Todos/` 练习骨架（你补全后用于验收）
+- `pnpm test:browser`: 运行 Browser Mode 用例（真实浏览器）
 
 ## 测试目标切换说明
 
@@ -112,6 +116,27 @@ $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/promise/myPromise.test.js
 pnpm test:todos
 ```
 
+## Browser Mode（组件/CSS 真实浏览器测试）
+
+- 配置文件：`vitest.browser.config.js`
+- 用例目录：`test/browser/**/*.browser.test.{js,jsx}`
+- 默认 provider：`playwright`（`chromium`）
+- 说明：这是在现有 `jsdom` 基础上的补充层，不替代原有单元测试
+
+首次使用需要安装浏览器内核：
+
+```powershell
+pnpm exec playwright install chromium
+```
+
+运行命令：
+
+```powershell
+pnpm test:browser
+pnpm test:browser:watch
+pnpm test:todos:browser
+```
+
 ## Todos 占位函数说明
 
 - `Todos/` 目录里的很多函数会看到类似：
@@ -129,5 +154,5 @@ return todo("MyPromise.then");
 这个项目的 Prompt 核心是：
 - 根据文档内容分主题创建源码目录
 - 为每个主题补可执行测试
-- 对不同类型内容使用不同测试策略（算法用 Node 单测，React/CSS 用 jsdom 浏览器模式）
+- 对不同类型内容使用不同测试策略（算法用 Node 单测，React/CSS 以 jsdom 为主，关键交互补充 Browser Mode）
 - 目标是把“可阅读笔记”升级为“可执行、可验证”的知识库
