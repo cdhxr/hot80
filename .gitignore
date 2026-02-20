@@ -1,0 +1,7 @@
+node_modules/
+.pnpm-store/
+.vitest/
+coverage/
+dist/
+*.log
+_tmp_*
