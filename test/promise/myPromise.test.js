@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { MyPromise } from "../../src/promise/MyPromise.js";
+import { MyPromise } from "@target/promise/MyPromise.js";
 
 describe("MyPromise", () => {
   it("supports async resolve and chain", async () => {
@@ -30,3 +30,4 @@ describe("MyPromise", () => {
     await expect(promise).rejects.toThrow("failed");
   });
 });
+

@@ -4,7 +4,7 @@ import {
   myAllSettled,
   myAny,
   myRace
-} from "../../src/promise/staticMethods.js";
+} from "@target/promise/staticMethods.js";
 
 describe("promise static methods", () => {
   it("myAll resolves in input order", async () => {
@@ -51,3 +51,4 @@ describe("promise static methods", () => {
     );
   });
 });
+

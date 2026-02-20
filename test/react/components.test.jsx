@@ -2,7 +2,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { describe, expect, it } from "vitest";
-import { Calculator, Counter, TodoList } from "../../src/react/components.jsx";
+import { Calculator, Counter, TodoList } from "@target/react/components.jsx";
 
 describe("react components", () => {
   it("Counter increments/decrements/resets", () => {
@@ -48,3 +48,4 @@ describe("react components", () => {
     expect(screen.getByTestId("result").textContent).toBe("50");
   });
 });
+

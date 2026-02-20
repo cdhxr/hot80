@@ -15,7 +15,7 @@ import {
   set,
   uniqueBasic,
   uniqueBy
-} from "../../src/array-object/core.js";
+} from "@target/array-object/core.js";
 
 describe("array-object core", () => {
   it("deepClone creates independent nested object", () => {
@@ -128,3 +128,4 @@ describe("array-object core", () => {
     });
   });
 });
+

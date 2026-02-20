@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { requestWithRetry } from "../../src/async/retry.js";
+import { requestWithRetry } from "@target/async/retry.js";
 
 describe("requestWithRetry", () => {
   beforeEach(() => {
@@ -36,3 +36,4 @@ describe("requestWithRetry", () => {
     expect(fn).toHaveBeenCalledTimes(1);
   });
 });
+

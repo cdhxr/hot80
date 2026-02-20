@@ -9,17 +9,24 @@ https://www.nowcoder.com/discuss/844536328413773824
 
 ## 项目目标
 
-- 将文档知识点拆解成 `src/` 下的最小可运行实现
+- 将文档知识点拆解成 `answer/` 下的最小可运行实现
+- 提供 `Todos/` 空函数骨架，按推导链补全练习
 - 为每个主题补齐 `test/` 下的自动化测试
 - 通过测试快速验证理解是否正确，避免只看不练
+
+## 目录说明
+
+- `answer/`: 完整参考实现（默认测试目标）
+- `Todos/`: 练习骨架（含推导链注释 + TODO 注释）
+- `src/`: 历史实现目录（保留）
 
 ## 目录与测试方式
 
 ### 1) 纯算法/逻辑目录（Node 单元测试）
 
-- `src/promise` / `src/async` / `src/patterns`
-- `src/array-object`
-- `src/data-structures`
+- `answer/promise` / `answer/async` / `answer/patterns`
+- `answer/array-object`
+- `answer/data-structures`
 
 测试方式：
 - 运行在 `vitest` 的 Node 环境
@@ -33,8 +40,8 @@ https://www.nowcoder.com/discuss/844536328413773824
 
 ### 2) React 目录（组件/Hook 测试）
 
-- `src/react/hooks.js`
-- `src/react/components.jsx`
+- `answer/react/hooks.js`
+- `answer/react/components.jsx`
 
 测试方式：
 - `vitest + jsdom + @testing-library/react`
@@ -47,7 +54,7 @@ https://www.nowcoder.com/discuss/844536328413773824
 
 ### 3) CSS/DOM 场景目录（浏览器行为模拟测试）
 
-- `src/css/browserDemos.js`
+- `answer/css/browserDemos.js`
 
 测试方式：
 - `vitest + jsdom`
@@ -76,7 +83,11 @@ https://www.nowcoder.com/discuss/844536328413773824
 pnpm install
 pnpm test
 pnpm test:watch
+pnpm test:todos
 ```
+
+- `pnpm test`: 运行 `answer/` 参考实现（默认）
+- `pnpm test:todos`: 运行 `Todos/` 练习骨架（你补全后用于验收）
 
 ## Prompt 简要总结
 

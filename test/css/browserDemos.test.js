@@ -5,7 +5,7 @@ import {
   TodoListApp,
   createProgressRingState,
   createTriangleStyle
-} from "../../src/css/browserDemos.js";
+} from "@target/css/browserDemos.js";
 
 describe("css/browser demos", () => {
   beforeEach(() => {
@@ -64,3 +64,4 @@ describe("css/browser demos", () => {
     carousel.stop();
   });
 });
+

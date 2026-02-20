@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { sleep, sleepCancelable } from "../../src/async/sleep.js";
+import { sleep, sleepCancelable } from "@target/async/sleep.js";
 
 describe("sleep helpers", () => {
   beforeEach(() => {
@@ -29,3 +29,4 @@ describe("sleep helpers", () => {
     expect(resolved).toBe(false);
   });
 });
+

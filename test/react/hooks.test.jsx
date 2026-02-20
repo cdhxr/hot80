@@ -8,7 +8,7 @@ import {
   useRequest,
   useThrottleFn,
   useUpdateEffect
-} from "../../src/react/hooks.js";
+} from "@target/react/hooks.js";
 
 describe("react hooks", () => {
   beforeEach(() => {
@@ -123,3 +123,4 @@ describe("react hooks", () => {
     expect(result.current.data).toBeUndefined();
   });
 });
+

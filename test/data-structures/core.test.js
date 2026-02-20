@@ -17,7 +17,7 @@ import {
   preorderIterative,
   quickSort,
   treeToArray
-} from "../../src/data-structures/core.js";
+} from "@target/data-structures/core.js";
 
 describe("data-structures core", () => {
   it("arrayToTree/treeToArray converts correctly", () => {
@@ -122,3 +122,4 @@ describe("data-structures core", () => {
     expect(pathSumIII(root, 22)).toBe(2);
   });
 });
+

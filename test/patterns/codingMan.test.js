@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { codingMan } from "../../src/patterns/codingMan.js";
+import { codingMan } from "@target/patterns/codingMan.js";
 
 describe("codingMan", () => {
   beforeEach(() => {
@@ -39,3 +39,4 @@ describe("codingMan", () => {
     ]);
   });
 });
+

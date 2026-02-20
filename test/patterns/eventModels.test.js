@@ -3,7 +3,7 @@ import {
   EventEmitter,
   Observer,
   Subject
-} from "../../src/patterns/eventModels.js";
+} from "@target/patterns/eventModels.js";
 
 describe("EventEmitter", () => {
   it("supports on and emit", () => {
@@ -73,3 +73,4 @@ describe("Subject/Observer", () => {
     expect(observer.update).toHaveBeenCalledTimes(0);
   });
 });
+

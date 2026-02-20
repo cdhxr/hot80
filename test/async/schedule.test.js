@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { schedule } from "../../src/async/schedule.js";
+import { schedule } from "@target/async/schedule.js";
 
 describe("schedule", () => {
   it("limits concurrency and keeps result order", async () => {
@@ -23,3 +23,4 @@ describe("schedule", () => {
     expect(maxRunning).toBe(2);
   });
 });
+
