@@ -89,8 +89,43 @@ pnpm test:todos
 - `pnpm test`: 运行 `answer/` 参考实现（默认）
 - `pnpm test:todos`: 运行 `Todos/` 练习骨架（你补全后用于验收）
 
+## 测试目标切换说明
+
+- 测试文件统一从 `@target/*` 导入代码
+- 默认情况下（未设置 `HOT80_TARGET`），`@target` 指向 `answer/`
+- 设置 `HOT80_TARGET=Todos` 后，`@target` 指向 `Todos/`
+
+### 单文件测试示例（以 MyPromise 为例）
+
+- 默认测 `answer`（会通过）：
+```powershell
+pnpm exec vitest run test/promise/myPromise.test.js
+```
+
+- 测 `Todos`（用于验收你自己填写的实现）：
+```powershell
+$env:HOT80_TARGET='Todos'; pnpm exec vitest run test/promise/myPromise.test.js
+```
+
+- 也可以用脚本（默认跑 `Todos` 全量）：
+```powershell
+pnpm test:todos
+```
+
+## Todos 占位函数说明
+
+- `Todos/` 目录里的很多函数会看到类似：
+```js
+return todo("MyPromise.then");
+```
+- 这里的 `todo()` 是故意放的“未完成占位符”，会直接抛出错误：
+  - `Error: TODO: MyPromise.then`
+- 目的：让你一运行测试就能准确定位到还没实现的函数。
+- 当你开始实现该题时，把对应的 `return todo("...")` 删除，改成真实逻辑即可。
+
 ## Prompt 简要总结
 
+项目基本是vibe coding
 这个项目的 Prompt 核心是：
 - 根据文档内容分主题创建源码目录
 - 为每个主题补可执行测试

@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/css/browserDemos.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -121,3 +122,4 @@ export class Carousel {
     return todo("Carousel.stop");
   }
 }
+

@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/data-structures/core.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -217,3 +218,4 @@ export function pathSumIII(root, target) {
   void target;
   return todo("pathSumIII");
 }
+

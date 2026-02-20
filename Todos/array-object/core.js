@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/array-object/core.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -142,3 +143,4 @@ export function reactiveArray(arr, onChange) {
   // TODO: 实现响应式数组代理
   return todo("reactiveArray");
 }
+

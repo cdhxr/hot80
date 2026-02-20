@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/async/schedule.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -10,3 +11,4 @@ export async function schedule(tasks, limit) {
   // TODO: 完成并发调度器
   return todo("schedule");
 }
+

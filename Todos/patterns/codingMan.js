@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/patterns/codingMan.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -29,3 +30,4 @@ export function codingManV2(name, logger = console.log, scheduler = setTimeout) 
 }
 
 export { noop };
+

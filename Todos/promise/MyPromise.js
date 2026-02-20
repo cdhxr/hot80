@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/promise/myPromise.test.js
 const PENDING = "pending";
 const FULFILLED = "fulfilled";
 const REJECTED = "rejected";
@@ -49,3 +50,4 @@ export class MyPromise {
 }
 
 export { PENDING, FULFILLED, REJECTED };
+

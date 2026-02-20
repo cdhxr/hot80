@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/react/hooks.test.jsx
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function todo(name) {
@@ -68,3 +69,4 @@ export function useRequest(serviceFn, options = {}) {
   void options;
   return todo("useRequest");
 }
+

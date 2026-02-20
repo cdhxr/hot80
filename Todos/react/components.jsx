@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/react/components.test.jsx
 import React from "react";
 
 function todo(name) {
@@ -31,3 +32,4 @@ export function Calculator() {
   // TODO: 实现 Calculator 组件
   return todo("Calculator");
 }
+

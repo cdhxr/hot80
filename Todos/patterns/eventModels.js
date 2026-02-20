@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/patterns/eventModels.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -92,3 +93,4 @@ export class Observer {
     return todo("Observer.update");
   }
 }
+

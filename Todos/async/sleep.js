@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/async/sleep.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -17,3 +18,4 @@ export function sleepCancelable(ms) {
   // TODO: 实现可取消 sleep
   return todo("sleepCancelable");
 }
+

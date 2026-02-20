@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/async/retry.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -13,3 +14,4 @@ export function requestWithRetry(
   // TODO: 完成重试 + 超时控制
   return todo("requestWithRetry");
 }
+

@@ -1,3 +1,4 @@
+// 单文件测试（Todos）: $env:HOT80_TARGET='Todos'; pnpm exec vitest run test/promise/staticMethods.test.js
 function todo(name) {
   throw new Error(`TODO: ${name}`);
 }
@@ -37,3 +38,4 @@ export function myAny(promises) {
   void promises;
   return todo("myAny");
 }
+
